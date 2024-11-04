@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "r4iLa57rfQo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\szafr\\.nuget\\packages\\system.net.http.json\\8.0.1\\system.net.http.json.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
