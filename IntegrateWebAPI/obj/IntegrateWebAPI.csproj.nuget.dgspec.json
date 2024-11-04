@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI.csproj": {}
+    "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI.csproj": {
+    "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
         "projectName": "IntegrateWebAPI",
-        "projectPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
+        "projectPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
         "packagesPath": "C:\\Users\\szafr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\IntegrateWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[8.0.1, )"

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = IntegrateWebAPI
-build_property.ProjectDir = C:\Users\szafr\Desktop\API Project\IntegrateWebAPI\IntegrateWebAPI\IntegrateWebAPI\
+build_property.ProjectDir = C:\Users\szafr\Desktop\API Project\IntegrateWebAPI\IntegrateWebAPI\Integrated_API\IntegrateWebAPI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
