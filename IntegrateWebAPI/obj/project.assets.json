@@ -108,9 +108,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
-      "projectName": "IntegrateWebAPI",
-      "projectPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\APIProject.csproj",
+      "projectName": "APIProject",
+      "projectPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\APIProject.csproj",
       "packagesPath": "C:\\Users\\szafr\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\obj\\",
       "projectStyle": "PackageReference",

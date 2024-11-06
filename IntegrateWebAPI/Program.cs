@@ -2,82 +2,109 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Globalization;
 
-namespace SunriseSunsetAPI
+namespace APIProject
 {
     class Program
     {
         static async Task Main(string[] args)
         {
+            Console.WriteLine("Hi\n\nThis is our API Project which will allow you to check the sunrise, sunset and day length in the following countries:");
+            Console.WriteLine("England");
+            Console.WriteLine("Spain");
+            Console.WriteLine("France");
+            Console.WriteLine("\nThis information will help you to plan your day, holidays, or a romantic dinner in the sunset with loved ones.\n");
+
+            string userInput;
+            do
+            {
+                Console.WriteLine("To continue, please press Enter.");
+                userInput = Console.ReadLine();
+
+                if (userInput != "")
+                {
+                    Console.WriteLine("Invalid input.\n");
+                }
+            } while (userInput != ""); 
+
             using HttpClient client = new HttpClient();
 
-            // Taking data from user in format YYYY-MM-DD
-            Console.WriteLine("Set a date (in format YYYY-MM-DD): ");
-            string date = Console.ReadLine();
-
-            // URL with API for dynamic date
-            string url = "https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=" + date;
-
-            try
+            string date;
+            while (true)
             {
-                HttpResponseMessage response = await client.GetAsync(url);
+                Console.WriteLine("Enter the date (format YYYY-MM-DD): ");
+                date = Console.ReadLine();
 
-                if (response.IsSuccessStatusCode)
+                if (DateTime.TryParseExact(date, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out _))
                 {
-                    string jsonResponse = await response.Content.ReadAsStringAsync();
+                    break; 
+                }
 
-                    // Show original JSON message
-                    Console.WriteLine("Original JSON:");
-                    Console.WriteLine(jsonResponse);
+                Console.WriteLine("Invalid date format. Try again.\n");
+            }
 
-                    // Deserializacja JSON do obiektu ResponseData
-                    var apiResponse = JsonConvert.DeserializeObject<ResponseData>(jsonResponse);
+            int countryId = -1;
+            while (countryId != 0 && countryId != 1 && countryId != 2)
+            {
+                Console.WriteLine("Select country: 0 for Spain, 1 for England, 2 for France:");
+                string countryChoice = Console.ReadLine();
 
-                    if (apiResponse != null && apiResponse.Results != null)
+                if (int.TryParse(countryChoice, out countryId))
+                {
+                    if (countryId != 0 && countryId != 1 && countryId != 2)
                     {
-                        // Wyświetlenie tylko wybranych informacji
-                        Console.WriteLine("\nInfo:");
-                        Console.WriteLine($"Sunrise time: {apiResponse.Results.Sunrise}");
-                        Console.WriteLine($"Sunset time: {apiResponse.Results.Sunset}");
-                        Console.WriteLine($"Day lenght: {apiResponse.Results.DayLength}");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nie udało się pobrać wyników z API.");
+                        Console.WriteLine("Invalid input. Please enter 0, 1, or 2.\n");
                     }
                 }
                 else
                 {
-                    Console.WriteLine($"Błąd: {response.StatusCode}");
+                    Console.WriteLine("Invalid input. Please enter 0, 1, or 2.\n");
+                    countryId = -1; 
+                }
+            }
+
+            List<CountrySunTimes> countries = new List<CountrySunTimes>();
+            countries.Add(new CountrySunTimes { CountryName = "Spain", GeoLatitude = "36.7201600", GeoLongitude = "-4.4203400" });
+            countries.Add(new CountrySunTimes { CountryName = "England", GeoLatitude = "51.5074", GeoLongitude = "-0.1278" });
+            countries.Add(new CountrySunTimes { CountryName = "France", GeoLatitude = "48.8566", GeoLongitude = "2.3522" });
+
+            string latitude = countries[countryId].GeoLatitude;
+            string longitude = countries[countryId].GeoLongitude;
+            string countryName = countries[countryId].CountryName;
+
+            string apiUrl = "https://api.sunrise-sunset.org/json?lat=" + latitude + "&lng=" + longitude + "&date=" + date;
+
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
+                if (response.IsSuccessStatusCode)
+                {
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+                    ResponseData data = JsonConvert.DeserializeObject<ResponseData>(jsonResponse);
+
+                    if (data != null && data.Results != null)
+                    {
+                        Console.WriteLine("\nSunrise and Sunset Information for " + countryName + ":");
+                        Console.WriteLine("Sunrise: " + data.Results.Sunrise);
+                        Console.WriteLine("Sunset: " + data.Results.Sunset);
+                        Console.WriteLine("Day Length: " + data.Results.DayLength);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No data found.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Error fetching data: " + response.StatusCode);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Wystąpił błąd: {ex.Message}");
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
-
-    // Klasa do przechowywania wyników z JSON
-    public class Results
-    {
-        [JsonProperty("sunrise")]
-        public string Sunrise { get; set; }
-
-        [JsonProperty("sunset")]
-        public string Sunset { get; set; }
-
-        [JsonProperty("day_length")]
-        public string DayLength { get; set; }
-    }
-
-    public class ResponseData
-    {
-        [JsonProperty("results")]
-        public Results Results { get; set; }
-
-        [JsonProperty("status")]
-        public string Status { get; set; }
-    }
 }
-

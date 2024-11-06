@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hKVSc+ElTD4=",
+  "dgSpecHash": "cuAoy3trwVA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\IntegrateWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\APIProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\szafr\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\szafr\\.nuget\\packages\\system.net.http.json\\8.0.1\\system.net.http.json.8.0.1.nupkg.sha512"
