@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|solutionrelative:integratewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|c:\\users\\szafr\\desktop\\api project\\integratewebapi\\integratewebapi\\integrated_api\\integratewebapi\\countrysuntimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|solutionrelative:integratewebapi\\countrysuntimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|c:\\users\\szafr\\desktop\\api project\\integratewebapi\\integratewebapi\\integrated_api\\integratewebapi\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|solutionrelative:integratewebapi\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|solutionrelative:integratewebapi\\responsedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|c:\\users\\szafr\\desktop\\api project\\integratewebapi\\integratewebapi\\integrated_api\\integratewebapi\\countrysuntimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|solutionrelative:integratewebapi\\countrysuntimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|c:\\users\\szafr\\desktop\\api project\\integratewebapi\\integratewebapi\\integrated_api\\integratewebapi\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A89F9F44-7E1D-4E14-9E9D-03BC4D5F2E76}|IntegrateWebAPI\\APIProject.csproj|solutionrelative:integratewebapi\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\Helper.cs",
+              "RelativeDocumentMoniker": "IntegrateWebAPI\\Helper.cs",
+              "ToolTip": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\Helper.cs",
+              "RelativeToolTip": "IntegrateWebAPI\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T18:00:48.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ResponseData.cs",
               "DocumentMoniker": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\ResponseData.cs",
               "RelativeDocumentMoniker": "IntegrateWebAPI\\ResponseData.cs",
@@ -38,11 +55,12 @@
               "RelativeToolTip": "IntegrateWebAPI\\ResponseData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T17:51:17.515Z"
+              "WhenOpened": "2024-11-06T17:51:17.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Results.cs",
               "DocumentMoniker": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\Results.cs",
               "RelativeDocumentMoniker": "IntegrateWebAPI\\Results.cs",
@@ -50,11 +68,12 @@
               "RelativeToolTip": "IntegrateWebAPI\\Results.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T17:45:39.464Z"
+              "WhenOpened": "2024-11-06T17:45:39.464Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CountrySunTimes.cs",
               "DocumentMoniker": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\CountrySunTimes.cs",
               "RelativeDocumentMoniker": "IntegrateWebAPI\\CountrySunTimes.cs",
@@ -62,7 +81,8 @@
               "RelativeToolTip": "IntegrateWebAPI\\CountrySunTimes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T17:40:53.263Z"
+              "WhenOpened": "2024-11-06T17:40:53.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +92,7 @@
               "RelativeDocumentMoniker": "IntegrateWebAPI\\Program.cs",
               "ToolTip": "C:\\Users\\szafr\\Desktop\\API Project\\IntegrateWebAPI\\IntegrateWebAPI\\Integrated_API\\IntegrateWebAPI\\Program.cs",
               "RelativeToolTip": "IntegrateWebAPI\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwD4AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T18:04:00.237Z",
               "EditorCaption": ""

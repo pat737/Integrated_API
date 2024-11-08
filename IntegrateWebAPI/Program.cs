@@ -11,6 +11,8 @@ namespace APIProject
     {
         static async Task Main(string[] args)
         {
+            Helper logger = new Helper(); // Create an instance of the Helper class for logging
+
             Console.WriteLine("Hi\n\nThis is our API Project which will allow you to check the sunrise, sunset and day length in the following countries:");
             Console.WriteLine("England");
             Console.WriteLine("Spain");
@@ -25,9 +27,11 @@ namespace APIProject
 
                 if (userInput != "")
                 {
-                    Console.WriteLine("Invalid input.\n");
+                    Console.WriteLine("Invalid input. Please press Enter to continue.");
                 }
-            } while (userInput != ""); 
+            } while (userInput != "");
+
+            logger.CreateLog("User pressed Enter to continue."); // Log that the user pressed Enter
 
             using HttpClient client = new HttpClient();
 
@@ -37,12 +41,13 @@ namespace APIProject
                 Console.WriteLine("Enter the date (format YYYY-MM-DD): ");
                 date = Console.ReadLine();
 
-                if (DateTime.TryParseExact(date, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out _))
+                if (DateTime.TryParseExact(date, "yyyy-MM-dd", null, DateTimeStyles.None, out _))
                 {
-                    break; 
+                    break;
                 }
 
-                Console.WriteLine("Invalid date format. Try again.\n");
+                Console.WriteLine("Invalid date format. Try again.");
+                logger.CreateLog("Invalid date format entered by the user."); // Log invalid date format
             }
 
             int countryId = -1;
@@ -55,26 +60,32 @@ namespace APIProject
                 {
                     if (countryId != 0 && countryId != 1 && countryId != 2)
                     {
-                        Console.WriteLine("Invalid input. Please enter 0, 1, or 2.\n");
+                        Console.WriteLine("Invalid input. Please enter 0, 1, or 2.");
+                        logger.CreateLog("Invalid country selection by the user."); // Log invalid selection
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input. Please enter 0, 1, or 2.\n");
-                    countryId = -1; 
+                    Console.WriteLine("Invalid input. Please enter 0, 1, or 2.");
+                    logger.CreateLog("Non-numeric input for country selection."); // Log non-numeric input
+                    countryId = -1; // Reset to ensure loop continues
                 }
             }
 
-            List<CountrySunTimes> countries = new List<CountrySunTimes>();
-            countries.Add(new CountrySunTimes { CountryName = "Spain", GeoLatitude = "36.7201600", GeoLongitude = "-4.4203400" });
-            countries.Add(new CountrySunTimes { CountryName = "England", GeoLatitude = "51.5074", GeoLongitude = "-0.1278" });
-            countries.Add(new CountrySunTimes { CountryName = "France", GeoLatitude = "48.8566", GeoLongitude = "2.3522" });
+            List<CountrySunTimes> countries = new List<CountrySunTimes>
+            {
+                new CountrySunTimes { CountryName = "Spain", GeoLatitude = "36.7201600", GeoLongitude = "-4.4203400" },
+                new CountrySunTimes { CountryName = "England", GeoLatitude = "51.5074", GeoLongitude = "-0.1278" },
+                new CountrySunTimes { CountryName = "France", GeoLatitude = "48.8566", GeoLongitude = "2.3522" }
+            };
 
             string latitude = countries[countryId].GeoLatitude;
             string longitude = countries[countryId].GeoLongitude;
             string countryName = countries[countryId].CountryName;
 
             string apiUrl = "https://api.sunrise-sunset.org/json?lat=" + latitude + "&lng=" + longitude + "&date=" + date;
+
+            logger.CreateLog($"Fetching data for {countryName} on {date} using URL: {apiUrl}"); // Log the API request
 
             try
             {
@@ -90,20 +101,24 @@ namespace APIProject
                         Console.WriteLine("Sunrise: " + data.Results.Sunrise);
                         Console.WriteLine("Sunset: " + data.Results.Sunset);
                         Console.WriteLine("Day Length: " + data.Results.DayLength);
+                        logger.CreateLog("Data successfully retrieved and displayed."); // Log successful data retrieval
                     }
                     else
                     {
                         Console.WriteLine("No data found.");
+                        logger.CreateLog("No data found in the API response."); // Log no data found
                     }
                 }
                 else
                 {
                     Console.WriteLine("Error fetching data: " + response.StatusCode);
+                    logger.CreateLog($"API request failed with status code: {response.StatusCode}"); // Log failed request
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An error occurred: " + ex.Message);
+                logger.CreateLog($"Exception occurred: {ex.Message}"); // Log exception
             }
         }
     }
