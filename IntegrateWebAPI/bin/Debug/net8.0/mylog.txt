@@ -8,3 +8,8 @@
 2024-11-11 14:10:43 - Invalid country selection by the user.
 2024-11-11 14:10:47 - Fetching data for Spain on 2024-11-09 using URL: https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=2024-11-09
 2024-11-11 14:10:48 - Data successfully retrieved and displayed.
+2024-11-11 14:12:39 - User pressed Enter to continue.
+2024-11-11 14:12:41 - Invalid date format entered by the user.
+2024-11-11 14:12:47 - Non-numeric input for country selection.
+2024-11-11 14:12:49 - Fetching data for Spain on 2004-01-05 using URL: https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=2004-01-05
+2024-11-11 14:12:50 - Data successfully retrieved and displayed.
