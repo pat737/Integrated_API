@@ -3,25 +3,25 @@ using System.IO;
 
 namespace APIProject
 {
-    public class Helper
+    public class Helper // this class is from our labs samples and it's tool to help log any activities such as errors and save them in a text file
     {
         public void CreateLog(string Message)
         {
             try
             {
-                string logFilePath = "mylog.txt";
+                string log_file_patch = "mylog.txt";
 
-                // create or append to the log file
-                using (StreamWriter sw = File.AppendText(logFilePath))
+                
+                using (StreamWriter sw = File.AppendText(log_file_patch))
                 {
-                    // write the timestamp and log message to the file
+                    
                     string timeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     sw.WriteLine(timeStamp + " - " + Message);
                 }
             }
             catch (Exception ex)
             {
-                // logging failed
+                
                 Console.WriteLine("Logging failed: " + ex.Message);
             }
         }

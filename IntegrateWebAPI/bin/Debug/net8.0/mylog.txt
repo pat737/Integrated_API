@@ -1,3 +1,10 @@
 2024-11-08 18:01:46 - User pressed Enter to continue.
 2024-11-08 18:01:57 - Fetching data for England on 2024-11-08 using URL: https://api.sunrise-sunset.org/json?lat=51.5074&lng=-0.1278&date=2024-11-08
 2024-11-08 18:01:58 - Data successfully retrieved and displayed.
+2024-11-11 14:10:20 - User pressed Enter to continue.
+2024-11-11 14:10:24 - Invalid date format entered by the user.
+2024-11-11 14:10:29 - Invalid date format entered by the user.
+2024-11-11 14:10:40 - Non-numeric input for country selection.
+2024-11-11 14:10:43 - Invalid country selection by the user.
+2024-11-11 14:10:47 - Fetching data for Spain on 2024-11-09 using URL: https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=2024-11-09
+2024-11-11 14:10:48 - Data successfully retrieved and displayed.

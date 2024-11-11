@@ -2,15 +2,15 @@
 
 namespace APIProject
 {
-    public class CountrySunTimes
+    public class CountrySunTimes // class have information about country name, latitude and longitude
     {
-        // Name of the country (e.g., "Spain", "England")
+        
         public string CountryName { get; set; }
 
-        // Geographical latitude of the country
+        
         public string GeoLatitude { get; set; }
 
-        // Geographical longitude of the country
+        
         public string GeoLongitude { get; set; }
     }
 }

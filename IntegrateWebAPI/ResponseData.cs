@@ -2,13 +2,15 @@
 
 namespace APIProject
 {
-    public class ResponseData
+   
+    public class ResponseData // that class represent the structure of the deserialized JSON response 
+                              // it's having main data as a results and response status for error handling which is used in lines 117,118 of Program class to display it and log it
     {
-        // Holds the main data for sunrise, sunset, and day length
+        
         [JsonProperty("results")]
         public Results Results { get; set; }
 
-        // Status of the API response (e.g., "OK")
+        
         [JsonProperty("status")]
         public string Status { get; set; }
     }
